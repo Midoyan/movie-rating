@@ -1,22 +1,29 @@
-1. `python3 -m venv env`
+# Fuzzy Movie Estimator (based on CWW) 
+
+### To run the app, follow these instructions:
+
+1. Activate virtual environment and install dependencies for Python in the backend folder:\
+   `python3 -m venv env`
    `source env/bin/activate`
    `python3 -m pip install -r requirements.txt`
 
-2. `export FLASK_APP=app`
+2. Create DB with the schema:\
+   `export FLASK_APP=app`
    `flask shell`
+   `from app import db`
+   `from models import Votes`
+   `from models import Movies`
+   `db.create_all()`\
+   Make sure db.sqlite is created in the backend folder
 
-3. `from app import db`
-   `from models import Task`
-   `from models import CarBrands`
-   `db.create_all()`
-   run `brand.sql`
+3. Run static/parse_movies.py to populate DB
 
-4. optional:
-   ~~t1 = Task(title='New task 1')~~
-   ~~t2 = Task(title='New task 2')~~
+4. Run backend:
+   `npm run serve`
 
-   ~~db.session.add(t1)~~
-   ~~db.session.add(t2)~~
-   db.session.commit()
-
-5. `flask run`
+5. Install npm packages in the frontend folder:
+   `npm install`
+ 
+6. Run frontend:
+   `npm run serve`
+   
