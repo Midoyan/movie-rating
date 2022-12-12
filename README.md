@@ -19,7 +19,7 @@
 3. Run static/parse_movies.py to populate DB
 
 4. Run backend:
-   `npm run serve`
+   `flask run`
 
 5. Install npm packages in the frontend folder:
    `npm install`
