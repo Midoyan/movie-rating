@@ -7,7 +7,7 @@
    `source env/bin/activate`
    `python3 -m pip install -r requirements.txt`
 
-2. Create DB with the schema:\
+2. Create DB with the schema (you can skip this step since we have already pushed db in repo):\
    `export FLASK_APP=app`
    `flask shell`
    `from app import db`
